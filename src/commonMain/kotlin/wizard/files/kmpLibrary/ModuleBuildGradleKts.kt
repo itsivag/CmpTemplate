@@ -219,37 +219,37 @@ class ModuleBuildGradleKts(info: ProjectInfo) : ProjectFile {
         appendLine("    if (project.hasProperty(\"signing.keyId\")) signAllPublications()")
         appendLine("}")
 
-        if (plugins.contains(BuildConfigPlugin)) {
-            appendLine("")
-            appendLine("buildConfig {")
-            appendLine("    // BuildConfig configuration here.")
-            appendLine("    // https://github.com/gmazzo/gradle-buildconfig-plugin#usage-in-kts")
-            appendLine("}")
-        }
+//        if (plugins.contains(BuildConfigPlugin)) {
+//            appendLine("")
+//            appendLine("buildConfig {")
+//            appendLine("    // BuildConfig configuration here.")
+//            appendLine("    // https://github.com/gmazzo/gradle-buildconfig-plugin#usage-in-kts")
+//            appendLine("}")
+//        }
+//
+//        if (plugins.contains(BuildKonfigPlugin)) {
+//            appendLine("")
+//            appendLine("buildkonfig {")
+//            appendLine("    // BuildKonfig configuration here.")
+//            appendLine("    // https://github.com/yshrsmz/BuildKonfig#gradle-configuration")
+//            appendLine("    packageName = \"${info.packageId}\"")
+//            appendLine("    defaultConfigs {")
+//            appendLine("    }")
+//            appendLine("}")
+//        }
 
-        if (plugins.contains(BuildKonfigPlugin)) {
-            appendLine("")
-            appendLine("buildkonfig {")
-            appendLine("    // BuildKonfig configuration here.")
-            appendLine("    // https://github.com/yshrsmz/BuildKonfig#gradle-configuration")
-            appendLine("    packageName = \"${info.packageId}\"")
-            appendLine("    defaultConfigs {")
-            appendLine("    }")
-            appendLine("}")
-        }
-
-        if (plugins.contains(SQLDelightPlugin)) {
-            appendLine("")
-            appendLine("sqldelight {")
-            appendLine("    databases {")
-            appendLine("        create(\"MyDatabase\") {")
-            appendLine("            // Database configuration here.")
-            appendLine("            // https://cashapp.github.io/sqldelight")
-            appendLine("            packageName.set(\"${info.packageId}.db\")")
-            appendLine("        }")
-            appendLine("    }")
-            appendLine("}")
-        }
+//        if (plugins.contains(SQLDelightPlugin)) {
+//            appendLine("")
+//            appendLine("sqldelight {")
+//            appendLine("    databases {")
+//            appendLine("        create(\"MyDatabase\") {")
+//            appendLine("            // Database configuration here.")
+//            appendLine("            // https://cashapp.github.io/sqldelight")
+//            appendLine("            packageName.set(\"${info.packageId}.db\")")
+//            appendLine("        }")
+//            appendLine("    }")
+//            appendLine("}")
+//        }
     }
 }
 

@@ -119,18 +119,18 @@ val AndroidxLifecycleViewmodel = AndroidxLifecycleRuntime.copy(
     platforms = emptySet()
 )
 
-val AndroidxNavigation = Dependency(
-    title = "Androidx Navigation",
-    description = "Navigation is a framework for navigating between 'destinations' within an Compose multiplatform application",
-    url = "https://developer.android.com/guide/navigation",
-    group = "org.jetbrains.androidx.navigation",
-    id = "navigation-compose",
-    version = "2.9.1",
-    catalogVersionName = "androidx-navigation",
-    catalogName = "androidx-navigation-compose",
-    platforms = emptySet()
-)
-
+//val AndroidxNavigation = Dependency(
+//    title = "Androidx Navigation",
+//    description = "Navigation is a framework for navigating between 'destinations' within an Compose multiplatform application",
+//    url = "https://developer.android.com/guide/navigation",
+//    group = "org.jetbrains.androidx.navigation",
+//    id = "navigation-compose",
+//    version = "2.9.1",
+//    catalogVersionName = "androidx-navigation",
+//    catalogName = "androidx-navigation-compose",
+//    platforms = emptySet()
+//)
+//
 val AndroidxNavigation3 = Dependency(
     title = "Androidx Navigation3",
     description = "Navigation 3 is a new navigation library designed to work with Compose.",

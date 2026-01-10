@@ -67,6 +67,7 @@ fun DefaultComposeAppInfo() = ProjectInfo(
         ComposeMaterial3,
         AndroidApplicationPlugin,
         AndroidxActivityCompose,
+        AndroidxNavigation3
     ),
     type = WizardType.ComposeApp
 )

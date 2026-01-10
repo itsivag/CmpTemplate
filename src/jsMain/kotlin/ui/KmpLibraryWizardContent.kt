@@ -232,14 +232,14 @@ val KmpLibraryWizardContent = FC<AppProps> { props ->
 
                     val deps: Set<DependencyBox> = setOf(
                         DependencyBox(ComposeMultiplatformPlugin),
-                        DependencyBox(KotlinxCoroutinesCore),
-                        DependencyBox(KotlinxSerializationJson),
-                        DependencyBox(KotlinxDateTime),
-                        DependencyBox(listOf(Kermit, Napier)),
-                        DependencyBox(KtorCore),
-                        DependencyBox(SQLDelightPlugin),
-                        DependencyBox(MultiplatformSettings),
-                        DependencyBox(listOf(BuildConfigPlugin, BuildKonfigPlugin)),
+//                        DependencyBox(KotlinxCoroutinesCore),
+//                        DependencyBox(KotlinxSerializationJson),
+//                        DependencyBox(KotlinxDateTime),
+//                        DependencyBox(listOf(Kermit, Napier)),
+//                        DependencyBox(KtorCore),
+//                        DependencyBox(SQLDelightPlugin),
+//                        DependencyBox(MultiplatformSettings),
+//                        DependencyBox(listOf(BuildConfigPlugin, BuildKonfigPlugin)),
                     )
                     Grid {
                         sx {

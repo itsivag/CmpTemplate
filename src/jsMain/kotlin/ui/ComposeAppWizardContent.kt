@@ -14,6 +14,7 @@ import web.cssom.*
 import web.html.HTMLInputElement
 import web.window.window
 import wizard.DefaultComposeAppInfo
+import wizard.Dependency
 import wizard.ProjectPlatform
 import wizard.ProjectPlatform.*
 import wizard.dependencies.*
@@ -156,22 +157,22 @@ val ComposeAppWizardContent = FC<AppProps> { props ->
                         info = default
                     }
 
-                    val deps = setOf(
-                        DependencyBox(listOf(Kermit, Napier)),
-                        DependencyBox(KotlinxCoroutinesCore),
-                        DependencyBox(KtorCore),
-                        DependencyBox(AndroidxLifecycleViewmodel),
-                        DependencyBox(listOf(AndroidxNavigation3, AndroidxNavigation, Voyager, Decompose, PreCompose)),
-                        DependencyBox(KotlinxSerializationJson),
-                        DependencyBox(listOf(Metro, KotlinInject, Koin, Kodein)),
-                        DependencyBox(listOf(Coil, Sketch, ImageLoader)),
-                        DependencyBox(MultiplatformSettings),
-                        DependencyBox(KotlinxDateTime),
-                        DependencyBox(listOf(RoomPlugin, SQLDelightPlugin)),
-                        DependencyBox(ApolloPlugin),
-                        DependencyBox(KStore),
-                        DependencyBox(listOf(BuildConfigPlugin, BuildKonfigPlugin)),
-                        DependencyBox(MaterialKolor),
+                    val deps = setOf<DependencyBox>(
+//                        DependencyBox(listOf(Kermit, Napier)),
+//                        DependencyBox(KotlinxCoroutinesCore),
+//                        DependencyBox(KtorCore),
+//                        DependencyBox(AndroidxLifecycleViewmodel),
+//                        DependencyBox(listOf(AndroidxNavigation3, AndroidxNavigation)),
+//                        DependencyBox(KotlinxSerializationJson),
+//                        DependencyBox(listOf(Metro, KotlinInject, Koin, Kodein)),
+//                        DependencyBox(listOf(Coil, Sketch, ImageLoader)),
+//                        DependencyBox(MultiplatformSettings),
+//                        DependencyBox(KotlinxDateTime),
+//                        DependencyBox(listOf(RoomPlugin, SQLDelightPlugin)),
+//                        DependencyBox(ApolloPlugin),
+//                        DependencyBox(KStore),
+//                        DependencyBox(listOf(BuildConfigPlugin, BuildKonfigPlugin)),
+//                        DependencyBox(MaterialKolor),
                     )
                     Grid {
                         sx {
@@ -210,6 +211,7 @@ val ComposeAppWizardContent = FC<AppProps> { props ->
                                     add(ComposeCompilerPlugin)
                                     add(ComposeMultiplatformPlugin)
                                     addAll(DefaultComposeLibraries)
+                                    add(AndroidxNavigation3)
                                     if (platforms.contains(Android)) {
                                         add(KotlinAndroidPlugin)
                                         add(AndroidApplicationPlugin)
@@ -249,60 +251,60 @@ internal fun Set<DependencyBox>.getSelectedDependencies() =
                     ComposeResources,
                 )
 
-                KtorCore -> listOfNotNull(
-                    KtorCore,
-                    KtorClientContentNegotiation,
-                    KtorClientSerialization,
-                    KtorSerializationJson,
-                    KtorClientLogging,
-                    KtorClientDarwin,
-                    KtorClientOkhttp,
-                    KtorClientJs,
-                    KtorClientLinux,
-                    KtorClientMingw
-                )
+//                KtorCore -> listOfNotNull(
+//                    KtorCore,
+//                    KtorClientContentNegotiation,
+//                    KtorClientSerialization,
+//                    KtorSerializationJson,
+//                    KtorClientLogging,
+//                    KtorClientDarwin,
+//                    KtorClientOkhttp,
+//                    KtorClientJs,
+//                    KtorClientLinux,
+//                    KtorClientMingw
+//                )
 
-                SQLDelightPlugin -> listOf(
-                    SQLDelightPlugin,
-                    SQLDelightDriverJvm,
-                    SQLDelightDriverAndroid,
-                    SQLDelightDriverNative,
-                    SQLDelightDriverJs
-                )
+//                SQLDelightPlugin -> listOf(
+//                    SQLDelightPlugin,
+//                    SQLDelightDriverJvm,
+//                    SQLDelightDriverAndroid,
+//                    SQLDelightDriverNative,
+//                    SQLDelightDriverJs
+//                )
+//
+//                RoomPlugin -> listOf(
+//                    RoomPlugin,
+//                    RoomPluginRuntime,
+//                    RoomPluginCompiler,
+//                    DevToolKSP
+//                )
 
-                RoomPlugin -> listOf(
-                    RoomPlugin,
-                    RoomPluginRuntime,
-                    RoomPluginCompiler,
-                    DevToolKSP
-                )
+//                KotlinInject -> listOf(
+//                    KotlinInject,
+//                    KotlinInjectCompiler,
+//                    DevToolKSP
+//                )
+//
+//                KStore -> listOf(
+//                    KStore,
+//                    KStoreFile,
+//                    KStoreStorage
+//                )
 
-                KotlinInject -> listOf(
-                    KotlinInject,
-                    KotlinInjectCompiler,
-                    DevToolKSP
-                )
-
-                KStore -> listOf(
-                    KStore,
-                    KStoreFile,
-                    KStoreStorage
-                )
-
-                Koin -> listOf(Koin, KoinCompose)
-                Coil -> listOf(Coil, CoilNetwork)
-                Sketch -> listOf(Sketch, SketchHttp)
-                Decompose -> listOf(Decompose, DecomposeCompose)
-                ApolloPlugin -> listOf(ApolloPlugin, ApolloRuntime)
+//                Koin -> listOf(Koin, KoinCompose)
+//                Coil -> listOf(Coil, CoilNetwork)
+//                Sketch -> listOf(Sketch, SketchHttp)
+//                Decompose -> listOf(Decompose, DecomposeCompose)
+//                ApolloPlugin -> listOf(ApolloPlugin, ApolloRuntime)
                 AndroidxLifecycleViewmodel -> listOf(AndroidxLifecycleViewmodel, AndroidxLifecycleRuntime)
-                KotlinxCoroutinesCore -> listOf(
-                    KotlinxCoroutinesCore,
-                    KotlinxCoroutinesAndroid,
-                    KotlinxCoroutinesJvm,
-                    KotlinxCoroutinesTest
-                )
+//                KotlinxCoroutinesCore -> listOf(
+//                    KotlinxCoroutinesCore,
+//                    KotlinxCoroutinesAndroid,
+//                    KotlinxCoroutinesJvm,
+//                    KotlinxCoroutinesTest
+//                )
 
-                KotlinxSerializationJson -> listOf(KotlinxSerializationPlugin, KotlinxSerializationJson)
+//                KotlinxSerializationJson -> listOf(KotlinxSerializationPlugin, KotlinxSerializationJson)
                 else -> listOf(it)
             }
         }

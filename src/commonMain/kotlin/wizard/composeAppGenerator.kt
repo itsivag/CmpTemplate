@@ -1,6 +1,6 @@
 package wizard
 
-import wizard.dependencies.ApolloPlugin
+//import wizard.dependencies.ApolloPlugin
 import wizard.files.Gitignore
 import wizard.files.GradleLibsVersion
 import wizard.files.GradleProperties
@@ -38,9 +38,11 @@ import wizard.files.composeApp.shared.IcLightModeXml
 import wizard.files.composeApp.shared.IcRotateRightXml
 import wizard.files.composeApp.shared.IndieFlowerTtf
 import wizard.files.composeApp.shared.IosMainKt
+import wizard.files.composeApp.shared.navigation.NavigationKt
 import wizard.files.composeApp.shared.SharedBuildGradleKts
 import wizard.files.composeApp.shared.StringsXml
 import wizard.files.composeApp.shared.ThemeKt
+import wizard.files.composeApp.shared.navigation.ScreensKt
 import wizard.files.composeApp.webApp.WebBuildGradleKts
 import wizard.files.composeApp.webApp.WebFavIcons
 import wizard.files.composeApp.webApp.WebIndexHtml
@@ -67,6 +69,8 @@ fun ProjectInfo.generateComposeAppFiles(): List<ProjectFile> = buildList {
     add(ColorKt(info))
     add(ThemeKt(info))
     add(AppKt(info))
+    add(NavigationKt(info))
+    add(ScreensKt(info))
     if (info.addTests) {
         add(ComposeTestKt(info))
     }
@@ -78,10 +82,10 @@ fun ProjectInfo.generateComposeAppFiles(): List<ProjectFile> = buildList {
     add(StringsXml(info))
     add(IndieFlowerTtf(info))
 
-    if (info.dependencies.contains(ApolloPlugin)) {
-        add(GraphQLSchema(info))
-        add(GraphQLQuery(info))
-    }
+//    if (info.dependencies.contains(ApolloPlugin)) {
+//        add(GraphQLSchema(info))
+//        add(GraphQLQuery(info))
+//    }
 
     if (info.hasPlatform(ProjectPlatform.Android)) {
         add(LocalProperties())

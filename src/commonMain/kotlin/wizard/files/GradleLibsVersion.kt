@@ -1,17 +1,8 @@
 package wizard.files
 
-import wizard.dependencies.KotlinxSerializationPlugin
 import wizard.ProjectFile
 import wizard.ProjectInfo
-import wizard.ProjectPlatform
-import wizard.dependencies.AndroidApplicationPlugin
-import wizard.dependencies.AndroidxActivityCompose
-import wizard.dependencies.ComposeCompilerPlugin
-import wizard.dependencies.ComposeFoundation
-import wizard.dependencies.ComposeMultiplatformPlugin
-import wizard.dependencies.ComposeRuntime
-import wizard.dependencies.ComposeUi
-import wizard.hasPlatform
+import wizard.dependencies.*
 import wizard.isPlugin
 import wizard.needComposeSample
 
@@ -33,7 +24,7 @@ class GradleLibsVersion(info: ProjectInfo) : ProjectFile {
         appendLine("[versions]")
         appendLine()
         dependencies
-            .filter { it != KotlinxSerializationPlugin }
+//            .filter { it != KotlinxSerializationPlugin }
             .distinctBy { it.catalogVersionName }
             .forEach {
                 appendLine("${it.catalogVersionName} = \"${it.version}\"")

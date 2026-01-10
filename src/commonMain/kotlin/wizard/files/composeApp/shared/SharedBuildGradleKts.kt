@@ -152,55 +152,55 @@ class SharedBuildGradleKts(info: ProjectInfo) : ProjectFile {
             appendLine("}")
         }
 
-        if (plugins.contains(BuildConfigPlugin)) {
-            appendLine("")
-            appendLine("buildConfig {")
-            appendLine("    // BuildConfig configuration here.")
-            appendLine("    // https://github.com/gmazzo/gradle-buildconfig-plugin#usage-in-kts")
-            appendLine("}")
-        }
+//        if (plugins.contains(BuildConfigPlugin)) {
+//            appendLine("")
+//            appendLine("buildConfig {")
+//            appendLine("    // BuildConfig configuration here.")
+//            appendLine("    // https://github.com/gmazzo/gradle-buildconfig-plugin#usage-in-kts")
+//            appendLine("}")
+//        }
 
-        if (plugins.contains(BuildKonfigPlugin)) {
-            appendLine("")
-            appendLine("buildkonfig {")
-            appendLine("    // BuildKonfig configuration here.")
-            appendLine("    // https://github.com/yshrsmz/BuildKonfig#gradle-configuration")
-            appendLine("    packageName = \"${info.packageId}\"")
-            appendLine("    defaultConfigs {")
-            appendLine("    }")
-            appendLine("}")
-        }
+//        if (plugins.contains(BuildKonfigPlugin)) {
+//            appendLine("")
+//            appendLine("buildkonfig {")
+//            appendLine("    // BuildKonfig configuration here.")
+//            appendLine("    // https://github.com/yshrsmz/BuildKonfig#gradle-configuration")
+//            appendLine("    packageName = \"${info.packageId}\"")
+//            appendLine("    defaultConfigs {")
+//            appendLine("    }")
+//            appendLine("}")
+//        }
 
-        if (plugins.contains(SQLDelightPlugin)) {
-            appendLine("")
-            appendLine("sqldelight {")
-            appendLine("    databases {")
-            appendLine("        create(\"MyDatabase\") {")
-            appendLine("            // Database configuration here.")
-            appendLine("            // https://cashapp.github.io/sqldelight")
-            appendLine("            packageName.set(\"${info.packageId}.db\")")
-            appendLine("        }")
-            appendLine("    }")
-            appendLine("}")
-        }
+//        if (plugins.contains(SQLDelightPlugin)) {
+//            appendLine("")
+//            appendLine("sqldelight {")
+//            appendLine("    databases {")
+//            appendLine("        create(\"MyDatabase\") {")
+//            appendLine("            // Database configuration here.")
+//            appendLine("            // https://cashapp.github.io/sqldelight")
+//            appendLine("            packageName.set(\"${info.packageId}.db\")")
+//            appendLine("        }")
+//            appendLine("    }")
+//            appendLine("}")
+//        }
 
-        if (plugins.contains(RoomPlugin)) {
-            appendLine("")
-            appendLine("room {")
-            appendLine("    schemaDirectory(\"\$projectDir/schemas\")")
-            appendLine("}")
-        }
+//        if (plugins.contains(RoomPlugin)) {
+//            appendLine("")
+//            appendLine("room {")
+//            appendLine("    schemaDirectory(\"\$projectDir/schemas\")")
+//            appendLine("}")
+//        }
 
-        if (plugins.contains(ApolloPlugin)) {
-            appendLine("")
-            appendLine("apollo {")
-            appendLine("    service(\"api\") {")
-            appendLine("        // GraphQL configuration here.")
-            appendLine("        // https://www.apollographql.com/docs/kotlin/advanced/plugin-configuration/")
-            appendLine("        packageName.set(\"${info.packageId}.graphql\")")
-            appendLine("    }")
-            appendLine("}")
-        }
+//        if (plugins.contains(ApolloPlugin)) {
+//            appendLine("")
+//            appendLine("apollo {")
+//            appendLine("    service(\"api\") {")
+//            appendLine("        // GraphQL configuration here.")
+//            appendLine("        // https://www.apollographql.com/docs/kotlin/advanced/plugin-configuration/")
+//            appendLine("        packageName.set(\"${info.packageId}.graphql\")")
+//            appendLine("    }")
+//            appendLine("}")
+//        }
 
         if (kspDeps.isNotEmpty()) {
             appendLine("")
